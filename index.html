@@ -1,1 +1,313 @@
-<h1>Hello, World</h1>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<!--==============レイアウトを制御する独自のCSSを読み込み===============-->
+<link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css">
+<link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/5-1-14/css/5-1-14.css">
+</head>
+
+  <style>
+*{
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+  @charset "utf-8";
+
+
+
+.imgbg{
+  padding:250px;
+}
+section{
+  background:#ffffff;
+}
+body{
+  background:#0000ff;
+  background-image: url(https://kinkakujiminami.github.io/topbg.jpeg);
+  background-size: 100vw;
+}
+h1{
+  font-size:1.2rem;
+  display: block;
+    font-size: 2em;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+h2{
+  font-size:1rem;
+}
+
+
+p{
+  margin-top:20px;  
+}
+
+small{
+  color:#fff;
+  display: block;
+  text-align: center;
+}
+
+.header{
+  width: calc(100% - 10px);
+  height: 90px;
+  color:#fff;
+  text-align: center;
+  border-radius:15px;
+  margin: 0 auto;
+    background-color:#f0f0f070;
+  position: fixed;
+  top: 10px;/*自分が固定したい位置(例は上から0pxの位置)*/
+  left: 5px;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+color: #000;
+}
+
+.topmargin{
+  padding:2.5px;
+}
+
+section{
+  padding:100px 30px
+    background:#ffffff;
+}
+
+section:nth-child(2n){
+  background:#f3f3f3; 
+}
+
+#footer{
+  background:#333;
+  padding:20px;
+}
+
+.img{
+  height:50px;
+  width:50px;
+  background-color:#ffffff;
+  border-radius:50px;
+  position: fixed;
+  top: 20px;
+  left: 10px;
+　 object-fit:contain;
+}
+
+.parent {
+    /* ベンダープレフィックスは省略 */
+    display: flex;
+    left: 0; /* 子要素を中央揃え */
+    position: relative;
+  margin: 0px 0px 0px 50px;
+}
+.right {
+    position: absolute;
+    right: 5px; /* 右寄せ */
+}
+
+.title1{
+    position: fixed;
+  top: 20px;/*自分が固定したい位置(例は上から0pxの位置)*/
+  left: 70px;
+}
+.title2{
+    position: fixed;
+  top: 45px;/*自分が固定したい位置(例は上から0pxの位置)*/
+  left: 70px;
+  font-size:20px;
+}
+.phone{
+  margin:10px;
+  font-size:14px;
+}
+.small{
+  margin:0.5px;
+  font-size:10px;
+}
+li{
+  color:#fff;
+}
+ul{
+  color:#fff;
+  text-align: center;
+  padding:15px;
+}
+a{
+  color:#1a6b23;
+  text-decoration:none; 
+  text-align: center;
+}
+.titlepadding:{
+  padding:50px;
+  color:#fff;
+}
+
+.button-fill{
+  background-color:#1a6b23;
+  color:#fff;
+  width:100px;
+  border-radius:50px;
+  margin: 0 auto;
+}
+.button-text{
+  background-color:#00000000;
+  color:#1a6b23;
+padding: 0px 10px;
+  border-radius:50px;
+  margin: 0 auto;
+}
+.box{
+  float: left;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.boxContainer{
+  overflow: hidden;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.item-link{
+  padding:8px;
+  background:#ff0000;
+  color:#ffffff;
+  width:180px;
+  border-radius:10px;
+}
+  </style>
+
+  <script>
+        class CustomBox extends HTMLElement {
+        constructor() {
+            super();
+            this.attachShadow({ mode: 'open' });
+        }
+
+        connectedCallback() {
+            const href = this.getAttribute('href');
+            const image = this.getAttribute('image');
+            const title = this.getAttribute('title');
+            const prise = this.getAttribute('prise');
+
+            this.shadowRoot.innerHTML = `
+                <style>
+                    a {
+                        text-decoration: none;
+                        color: inherit;
+                    }
+                    .item-box {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        text-align: center;
+                    }
+                    .box{
+  float: left;
+    margin: 0 auto;
+    text-align: center;
+}
+.item-name{
+font-size:24px;
+}
+.item-price{
+font-size:18px;
+}
+img{
+background:#ffffff;
+　 object-fit:scale-down;
+}
+                </style>
+                <div class="box">
+                <a href="${href}">
+                    <div class="item-box">
+                        <img src="${image}" height="190px" width="190px" style="padding:10px;">
+                        <div class="item-name">${title}</div>
+                        <div class="item-price">${prise}</div>
+                    </div>
+                </a>
+                </div>
+            `;
+        }
+    }
+
+    customElements.define('custom-box', CustomBox);
+  </script>
+<body>
+  <div class="topmargin"></div>
+  <div class="header">
+    <div class="img">
+      <img src="https://lh3.googleusercontent.com/fife/ALs6j_E8QYVleijTCbU2kG7-laVwfXZRBjXjGGdJvAu8wgo53DG_U3SAOoxRgjtCS7ltmJp9G9QS3C58HzghYqhRIuB2Kgg2a_l_sswC4q3nwXqvMmxSQxbRfnRfsvSucFz2PBgiBNZHTNjbznyGNUKY3v2quC_BUhleWt4yu4LsFiei7Kc44lqquJPMOrCRvmQz7765dXG_16RgjCWJ5b-kFJX2-ap4CE2ZxPzIBKdwRDUJSecJMymdjLwKe7g9i-K2i9VK0wPofATGW2j_g3gAwoDSD7t3dgsMlaMj6gbUosUVyCWv3Yi6jyHxos3ByIx5GnLr7iOXAUniQPF-C5cp6Aheuh8M1Xm7Jr0w4fokzOLomWWLYQaIGQoJd_8NXsyOg6SVPMVEEwNCWnWE2-MYI_6i1MJxtvO8t35DZl62Q3zmX7icuDEU4OrgjVpfQZ01Pjqfda-c8yI6i-0VW8LNFBy3OWS-NArH7lio53212AQ7D5Y-niv-gv3dRvcEJw5vc0YyPpjTTo64uW8nbipD6PO7VyzHMBbWce0uTzVXs3nEa4WRUTkWSi2pafAqg_OoSqR436zfjQK6WEJYMl0_zl9rWONB5Hse8owPmFCtaP9z0Mtz1txV2tczF7rUHZtaePhUboCAV5QuVLb1Ucez_HERpD-rk5tSdCaTmp45Wk3nKhq2PkgIoBPAQrUIlyY13DeBIaecKvwlT0FfyN37vSsHXSkg91r8dUFGAwz_hnYs_xfpII7peHAbzUW7MIg5_8GFCzUYqt-hbOWfOCuPsfp5l5ZRxiG7IWNjYDjhZZFK8_0G2Fmv0IOKVj9zRoS-v9g6SS5K2AmbAZZYrtmaiTzOnKvK5FYjRNHYigQXOZNIb0dmJGYiNBs4MFeNi89E7KiyB4bLCBsk1a3JXZylK3ATOv_BDTCDIylkvaxDVPBj8EldKswtTybM5f72NDyozbGR_jAV8Gfy9VEXOlj-ByZeR8EbiICOsdR1KCsNo4P3CHKbN-b9XiswOx38uv_5xThHg_2NqnRAgL5zp3ulBKoQ2XMCPGXdKTcMVwb8gxlW9S6rYWWcqU_qB0CINyprwkDS4cSl8vDoVldUZqdtdc1acnm5D6RucBYAHk5-YYG6dX-DUm4CuEAOirnMO4_H9Zmnh2hjB4JQyHBGaUFFlHcvKXAqKRMEVWWUWVUJcEr9epuLr3LgRP0HTsiaNV7kE9bpfy4tkmOKQbhSjarVgmikPpJX4X_ZCzvabOeavGTQKlPeOfza0Atknv7_9ZsJoWxdYvvoAKDvw9FbehPQCw3xRo9TJSY47FguxqpNJ7iz_Vj3IC7yTWKHTjRyKhzwFc7qN3DfrP5JczHOt1W5e9R0QM08x3AcxJjOCTztxBz4RgUpTXDXiQ4FmdWtMO7WM1U7bXNB84frQp5v77Z6wNv5djdbz65jzQVZneDi78HLHdsX8D-fFhaBWWFhRFnGTB2uKEgbPjKY2Nn1x6CuhzOebQqQ3iysoEfWuY7AqDsL99kE6OIQtf1cJWEX8rpyeM4njw4IF1tBfiMz-rCgNf-rA2XczoTz4ZnYqJljjDo6X7Gj1DDSWBF0Hq12HJ_Bo2V2wDY0VInlLSFfVA=w2560-h1517" height="50px" width="50px">
+        </div>
+    
+    <div class="parent">
+    <div class="center">
+
+      <div class="title1">まるかんのお店</div>
+      <div class="title2">金閣寺南店</div>
+  </div>
+    <div class="right">
+      
+
+      <div class="phone">
+        <div class="phone">
+          お問い合わせは
+          </div>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSehAX4qJziL5090CgWGRtnj6yZrInkUNXwUlEc8NGXo4E7E4w/viewform?usp=sf_link"><div class="item-link">こちら</div></a>
+          </div>
+      </div>
+</div>
+    </div>
+    <div class="imgbg"></div>
+  <main id="main">
+    <section>
+      <div class="boxContainer">
+        <div class="box">
+      <a href="https://sites.google.com/view/marukan-kinkakujiminami/%E3%83%9B%E3%83%BC%E3%83%A0"><div class="button-text">トップ</div></a>
+          </div>
+          <div class="box">
+      <a href="https://sites.google.com/view/marukan-kinkakujiminami/%E3%83%9B%E3%83%BC%E3%83%A0"><div class="button-text">斉藤ひとりさん</div></a>
+            </div>
+                  <div class="box">
+      <a href="https://sites.google.com/view/marukan-kinkakujiminami/%E3%83%9B%E3%83%BC%E3%83%A0"><div class="button-text">ネットショップ</div></a>
+            </div>
+                  <div class="box">
+      <a href="https://sites.google.com/view/marukan-kinkakujiminami/%E3%83%9B%E3%83%BC%E3%83%A0"><div class="button-text">商品一覧</div></a>
+            </div>
+
+         </div>
+
+      <h2>大人気商品</h2>
+<div class="boxContainer">
+  
+
+<custom-box href="https://kinkakujiminami.github.io/page/suiso.html" image="https://kinkakujiminami.github.io/img/suiso-0.jpeg" title="水素<br>若若美人" prise="約1ヶ月分 62カプセル<br>¥12,960"></custom-box>
+
+        <custom-box href="https://example.com/item1" image="https://kinkakujiminami.github.io/img/suiryu-0.jpeg" title="水晶エキス<br>水龍" prise="約1ヶ月分 31包<br>¥12,960"></custom-box>
+  
+        <custom-box href="https://example.com/item1" image="https://kinkakujiminami.github.io/img/joka-0.jpeg" title="青汁<br>ダイエットJOKA青汁" prise="約1ヶ月分 93包<br>¥12.960"></custom-box>
+
+    </div>
+    </section>
+      <!--/main--></main>
+
+  <footer id="footer">
+  <small>&copy; copyright.</small>
+  </footer>
+  
+
+</body>
+</html>
