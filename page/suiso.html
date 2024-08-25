@@ -6,25 +6,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
-  <script>
-        let currentIndex = 0;
-    const testImgs = document.querySelectorAll('.testimg');
 
-    function showSlide(index) {
-        testImgs[currentIndex].classList.remove('active');
-        currentIndex = (index + testImgs.length) % testImgs.length;
-        testImgs[currentIndex].classList.add('active');
-    }
-
-    function showNext() {
-        showSlide(currentIndex + 1);
-    }
-
-    function showPrev() {
-        showSlide(currentIndex - 1);
-    }
-    
- </script>
 </head>
   <style>
 *{
@@ -70,13 +52,9 @@
       <a href="https://sites.google.com/view/marukan-kinkakujiminami/%E3%83%9B%E3%83%BC%E3%83%A0"><div class="button-text">商品一覧</div></a>
             </div>
          </div>
-<div class="carousel-container">
-    <div class="testimg active" style="background-image: url(https://kinkakujiminami.github.io/img/suiso-0.jpeg); 　 object-fit:cover;">Hello</div>
+
+      <div class="testimg active" style="background-image: url(https://kinkakujiminami.github.io/img/suiso-0.jpeg); 　 object-fit:cover;">Hello</div>
     <div class="testimg" style="background-image: url(https://kinkakujiminami.github.io/img/suiso-1.jpeg); 　 object-fit:cover;">Hello</div>
-    <button class="carousel-button left" onclick="showPrev()">◀</button>
-    <button class="carousel-button right" onclick="showNext()">▶</button>
-</div>
-      
 <div class="item-name">水素 若若美人</div>
     
     <div class="item-price">12,960円</div>
