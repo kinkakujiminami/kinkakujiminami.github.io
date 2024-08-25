@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+  <link href="https://kinkakujiminami.github.io/page/style.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+  <script>
+        let currentIndex = 0;
+    const testImgs = document.querySelectorAll('.testimg');
+
+    function showSlide(index) {
+        testImgs[currentIndex].classList.remove('active');
+        currentIndex = (index + testImgs.length) % testImgs.length;
+        testImgs[currentIndex].classList.add('active');
+    }
+
+    function showNext() {
+        showSlide(currentIndex + 1);
+    }
+
+    function showPrev() {
+        showSlide(currentIndex - 1);
+    }
+    
+ </script>
+</head>
+  <style>
+*{
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}</style>
+  
+<body>
+  <div class="topmargin"></div>
+  <div class="header">
+    <div class="img">
+      <img src="https://lh3.googleusercontent.com/fife/ALs6j_E8QYVleijTCbU2kG7-laVwfXZRBjXjGGdJvAu8wgo53DG_U3SAOoxRgjtCS7ltmJp9G9QS3C58HzghYqhRIuB2Kgg2a_l_sswC4q3nwXqvMmxSQxbRfnRfsvSucFz2PBgiBNZHTNjbznyGNUKY3v2quC_BUhleWt4yu4LsFiei7Kc44lqquJPMOrCRvmQz7765dXG_16RgjCWJ5b-kFJX2-ap4CE2ZxPzIBKdwRDUJSecJMymdjLwKe7g9i-K2i9VK0wPofATGW2j_g3gAwoDSD7t3dgsMlaMj6gbUosUVyCWv3Yi6jyHxos3ByIx5GnLr7iOXAUniQPF-C5cp6Aheuh8M1Xm7Jr0w4fokzOLomWWLYQaIGQoJd_8NXsyOg6SVPMVEEwNCWnWE2-MYI_6i1MJxtvO8t35DZl62Q3zmX7icuDEU4OrgjVpfQZ01Pjqfda-c8yI6i-0VW8LNFBy3OWS-NArH7lio53212AQ7D5Y-niv-gv3dRvcEJw5vc0YyPpjTTo64uW8nbipD6PO7VyzHMBbWce0uTzVXs3nEa4WRUTkWSi2pafAqg_OoSqR436zfjQK6WEJYMl0_zl9rWONB5Hse8owPmFCtaP9z0Mtz1txV2tczF7rUHZtaePhUboCAV5QuVLb1Ucez_HERpD-rk5tSdCaTmp45Wk3nKhq2PkgIoBPAQrUIlyY13DeBIaecKvwlT0FfyN37vSsHXSkg91r8dUFGAwz_hnYs_xfpII7peHAbzUW7MIg5_8GFCzUYqt-hbOWfOCuPsfp5l5ZRxiG7IWNjYDjhZZFK8_0G2Fmv0IOKVj9zRoS-v9g6SS5K2AmbAZZYrtmaiTzOnKvK5FYjRNHYigQXOZNIb0dmJGYiNBs4MFeNi89E7KiyB4bLCBsk1a3JXZylK3ATOv_BDTCDIylkvaxDVPBj8EldKswtTybM5f72NDyozbGR_jAV8Gfy9VEXOlj-ByZeR8EbiICOsdR1KCsNo4P3CHKbN-b9XiswOx38uv_5xThHg_2NqnRAgL5zp3ulBKoQ2XMCPGXdKTcMVwb8gxlW9S6rYWWcqU_qB0CINyprwkDS4cSl8vDoVldUZqdtdc1acnm5D6RucBYAHk5-YYG6dX-DUm4CuEAOirnMO4_H9Zmnh2hjB4JQyHBGaUFFlHcvKXAqKRMEVWWUWVUJcEr9epuLr3LgRP0HTsiaNV7kE9bpfy4tkmOKQbhSjarVgmikPpJX4X_ZCzvabOeavGTQKlPeOfza0Atknv7_9ZsJoWxdYvvoAKDvw9FbehPQCw3xRo9TJSY47FguxqpNJ7iz_Vj3IC7yTWKHTjRyKhzwFc7qN3DfrP5JczHOt1W5e9R0QM08x3AcxJjOCTztxBz4RgUpTXDXiQ4FmdWtMO7WM1U7bXNB84frQp5v77Z6wNv5djdbz65jzQVZneDi78HLHdsX8D-fFhaBWWFhRFnGTB2uKEgbPjKY2Nn1x6CuhzOebQqQ3iysoEfWuY7AqDsL99kE6OIQtf1cJWEX8rpyeM4njw4IF1tBfiMz-rCgNf-rA2XczoTz4ZnYqJljjDo6X7Gj1DDSWBF0Hq12HJ_Bo2V2wDY0VInlLSFfVA=w2560-h1517" height="50px" width="50px">
+        </div>
+    
+    <div class="parent">
+    <div class="center">
+
+      <div class="title1">まるかんのお店</div>
+      <div class="title2">金閣寺南店</div>
+  </div>
+    <div class="right">
+     
+      </div>
+</div>
+    </div>
+
+    
+  <main id="main">
+    <section>
+      <div class="boxContainer">
+        <div class="box">
+      <a href="https://sites.google.com/view/marukan-kinkakujiminami/%E3%83%9B%E3%83%BC%E3%83%A0"><div class="button-text">トップ</div></a>
+          </div>
+          <div class="box">
+      <a href="https://sites.google.com/view/marukan-kinkakujiminami/%E3%83%9B%E3%83%BC%E3%83%A0"><div class="button-text">斉藤ひとりさん</div></a>
+            </div>
+                  <div class="box">
+      <a href="https://sites.google.com/view/marukan-kinkakujiminami/%E3%83%9B%E3%83%BC%E3%83%A0"><div class="button-text">ネットショップ</div></a>
+            </div>
+                  <div class="box">
+      <a href="https://sites.google.com/view/marukan-kinkakujiminami/%E3%83%9B%E3%83%BC%E3%83%A0"><div class="button-text">商品一覧</div></a>
+            </div>
+         </div>
+<div class="carousel-container">
+    <div class="testimg active" style="background-image: url(https://kinkakujiminami.github.io/img/suiso-0.jpeg); 　 object-fit:cover;">Hello</div>
+    <div class="testimg" style="background-image: url(https://kinkakujiminami.github.io/img/suiso-1.jpeg); 　 object-fit:cover;">Hello</div>
+    <button class="carousel-button left" onclick="showPrev()">◀</button>
+    <button class="carousel-button right" onclick="showNext()">▶</button>
+</div>
+      
+<div class="item-name">水素 若若美人</div>
+    
+    <div class="item-price">12,960円</div>
+    
+    <a href="#"><div class="item-link">カートに入れる</div></a>
+    
+    <p>エネルギーに、医療に、さまざまな分野で次世代の活躍が期待されている水素。<br>
+まるかんは、そんな次世代を担う水素に改めて着目。<br>
+独自の配合バランスで、「飲んだら分かる！」サプリメントです！</p>
+      
+  <!--/main--></main>
+  
+
+</body>
+</html>
